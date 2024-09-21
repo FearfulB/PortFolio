@@ -9,5 +9,3 @@ node_modules/
 /.vscode/
 /.idea/
 
-# Exclure les fichiers temporaires
-*.log
