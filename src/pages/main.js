@@ -36,6 +36,7 @@ export default function Main() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
             >
+            </motion.div>
             <div className="h-full w-full z-10 top-20 absolute " >
                 <h1 className="text-center text-6xl text-gray-800 MainFontBold font-bold  text-animated">BOIS Johann</h1>
             </div>
