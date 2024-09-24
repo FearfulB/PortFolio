@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { OrbitControls } from '@react-three/drei';
 import AnimatedBox from '../function/main';
 import ScrollReveal from '../function/scrollReveal';
+import SnowEffect from '../function/snow';
 
 export default function Main() {
     useEffect(() => {
@@ -22,14 +23,17 @@ export default function Main() {
     }, []);
 
     return (
-        <div className="w-screen h-screen relative">
+        <div className="w-screen h-screen relative bg-gray-950">
             <Canvas className="fixed top-0 left-0 w-full h-full" id="scrollingText">
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[0, 10, 5]} intensity={1} />
                 <AnimatedBox />
                 <OrbitControls />
-            </Canvas>
+                <SnowEffect/>
+                {/* <perspectiveCamera position={[0, 0, 30]} /> */}
+                {/* <gridHelper args={[100, 10]} position={[0, -50, 0]} /> */}
 
+            </Canvas>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
