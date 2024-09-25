@@ -6,12 +6,14 @@ const SnowEffect = () => {
   const snowflakesRef = useRef();
   const snowflakesCount = 1000;
   const positions = new Float32Array(snowflakesCount * 3);
+  const speeds = new Float32Array(snowflakesCount);
 
   // Initialisation des positions des flocons de neige
   for (let i = 0; i < snowflakesCount; i++) {
     positions[i * 3] = Math.random() * 200 - 100;  // Position X
     positions[i * 3 + 1] = Math.random() * 200 - 100; // Position Y
     positions[i * 3 + 2] = Math.random() * 200 - 100; // Position Z
+    speeds[i] = 0.02 + Math.random() * 0.05;
   }
 
   // Utilisation de useEffect pour créer la géométrie
@@ -31,7 +33,7 @@ const SnowEffect = () => {
       const positionsArray = positionsAttribute.array;
 
       for (let i = 0; i < snowflakesCount; i++) {
-        positionsArray[i * 3 + 1] -= 0.1; // Descendre les flocons
+        positionsArray[i * 3 + 1] -= speeds[i]; // Descendre les flocons
 
         // Remplacer les flocons s'ils sortent du cadre
         if (positionsArray[i * 3 + 1] < -100) {
