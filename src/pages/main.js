@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion, useAnimation } from 'framer-motion';
-import AnimatedBox from '../function/main';
+import AnimatedBox, { LoadFbx } from '../function/main';
 import SnowEffect from '../function/snow';
 import getTotalHeight from '../function/getTotalHeight';
 import i18n from '../component/translateText';
@@ -132,8 +132,10 @@ export default function Main() {
             <Canvas className="fixed top-0 left-0 w-full h-full" id="canva">
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[0, 10, 5]} intensity={1} />
-                <AnimatedBox />
+                <LoadFbx/>
+                {/* <AnimatedBox /> */}
                 <SnowEffect />
+                
             </Canvas>
             <label className="inline-flex items-center z-10 cursor-pointer absolute top-6 right-6 lg:top-12 lg:right-20">
             <input 
@@ -146,12 +148,12 @@ export default function Main() {
                 {/* Drapeaux en fond */}
                 <div className="absolute inset-0 flex justify-between items-center px-2">
                 <img 
-                    src="assets/france.png" 
+                    src="assets/image/france.png" 
                     alt="Johann Bois Portfolio" 
                     className="w-6 h-6 z-20" 
                 />
                 <img 
-                    src="assets/uk.png" 
+                    src="assets/image/uk.png" 
                     alt="Johann Bois Portfolio" 
                     className="w-7 h-6 z-20" 
                 />
@@ -198,7 +200,7 @@ export default function Main() {
                     className='flex justify-start'
                 >
                     <div className='bg-gradient-to-b from-blue-500 to-blue-300 p-8 bg-opacity-50 rounded-r-lg text-center w-1/2 sm:w-[40%] backdrop-blur-md' style={{ transform: `translateY(${scrollPosition * -1}px)`, position: 'relative' }}>
-                        <img src="assets/Johann.jpg" alt="Your name" class="w-32 rounded-full shadow-lg"/>
+                        <img src="assets/image/Johann.jpg" alt="Your name" class="w-32 rounded-full shadow-lg"/>
                         <div class="text-left">
                             <h1 class="text-4xl lg:text-5xl font-bold snowWhite MainFontBold">
                                 BOIS Johann
@@ -249,18 +251,18 @@ export default function Main() {
             >
                 <div id='skills' className='sm:w-1/3 flex items-center mt-6 MainFontBold' style={{ transform: `translateY(${scrollPosition * -1}px)`, position: 'relative' }}>
                     <div id="skill-panel-1" className="skill-panel transition-transform duration-1000 ease-in-out transform relative w-1/2">
-                        <img src="assets/woodMultipleSign.png" alt='portfolio Johann Bois' className=''/>
+                        <img src="assets/image/woodMultipleSign.png" alt='portfolio Johann Bois' className=''/>
                         <p className='snowWhite text-xm sm:text-xl absolute top-[10%] left-[25%] md:top-[13%] md:left-1/3 '>JavaScript</p>
                         <p className='snowWhite text-xm sm:text-xl absolute top-[30%]  left-1/3 md:top-[33%] md:left-[40%] '>React</p>
                         <p className='snowWhite text-xm sm:text-xl absolute top-1/2 left-1/3 md:top-[53%] md:left-[36%] '>Node.js</p>
 
                     </div>
                     <div id="skill-panel-2" className="skill-panel transition-transform duration-1000 ease-in-out transform relative w-1/4">
-                        <img src="assets/arrow.png" alt='portfolio Johann Bois' className='w-5/6'/>
+                        <img src="assets/image/arrow.png" alt='portfolio Johann Bois' className='w-5/6'/>
                         <p className='snowWhite text-xs sm:text-lg absolute top-[12px] left-[21px] md:top-[19%] md:left-1/4 -rotate-6'>C++</p>
                     </div>
                     <div id="skill-panel-3" className="skill-panel pt-20 transition-transform duration-1000 ease-in-out transform relative w-1/4">
-                    <img src="assets/arrowReverse.png" alt='portfolio Johann Bois'/>
+                    <img src="assets/image/arrowReverse.png" alt='portfolio Johann Bois'/>
                     <p className='snowWhite text-xm sm:text-xl absolute top-[57%] left-[29px] md:top-1/2 md:left-[40%] rotate-6 '>C#</p>
                     </div>
                 </div>
