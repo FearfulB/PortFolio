@@ -26,7 +26,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 
 export function LoadFbx(){
 
-  const fbx = useLoader(FBXLoader, 'assets/models/mountain.fbx');
+  const fbx = useLoader(FBXLoader, 'assets/models/winterIsland.fbx');
   const pivotRef = useRef();
 
   useFrame(() => {
@@ -39,9 +39,8 @@ export function LoadFbx(){
 
   return (
     <>
-    <object3D ref = {pivotRef} position={[0,-10, -50]} >
+    <object3D ref = {pivotRef} position={[0,-120, -400]} >
       <primitive object={fbx} position = {[-20,0,0]}  scale={[0.1,0.1,0.1 ]} />
-      {/* <axesHelper args={[100]} /> Helper avec une taille de 100 */}
     </object3D>
     </>
   );
