@@ -32,7 +32,7 @@ export function LoadFbx(){
   useFrame(() => {
     if (pivotRef.current) {
       // modelRef.current.rotation.x += 0.01;
-      pivotRef.current.rotation.y += 0.004;
+      pivotRef.current.rotation.y += 0.002;
     }
   });
   
@@ -40,7 +40,7 @@ export function LoadFbx(){
   return (
     <>
     <object3D ref = {pivotRef} position={[0,-120, -400]} >
-      <primitive object={fbx} position = {[-20,0,0]}  scale={[0.1,0.1,0.1 ]} />
+      <primitive object={fbx} position = {[-20,0,0]}  scale={[0.08,0.08,0.08 ]} />
     </object3D>
     </>
   );
