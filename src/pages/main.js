@@ -222,9 +222,22 @@ export default function Main() {
                     transition={{ duration: 3 }}
                     className='flex justify-end'
                 >
-                    <div className='bg-white/50 rounded-l-lg text-center w-1/2 sm:w-1/3 backdrop-blur-md' style={{ transform: `translateY(${scrollPosition * -1}px)`, position: 'relative' }}>
-                        <h2 className="text-3xl snowWhite z-10 MainFontBold pt-4">My Project</h2>
-                        <p className="snowWhite MainFont">Ce texte apparaît également en scrollant.</p>
+                    <div className='bg-white/50 rounded-l-lg  w-1/2 sm:w-1/3 backdrop-blur-md' style={{ transform: `translateY(${scrollPosition * -1}px)`, position: 'relative' }}>
+                        <h2 className="text-3xl snowWhite z-10 MainFontBold pt-4 text-center">Tona : Fallen Zenith</h2>
+                        <div className ="snowWhite MainFont pl-4">
+                            <p className=""><b>Rôle :</b> Développeur Unity et gestionnaire de projet</p>
+                            <p className=""><b>Equipe :</b> 15 étudiants passionnés (développeurs, artistes, business)</p>
+                            <p className=""><b>Compétences acquises :</b></p>
+                            <ul>
+                                <li><b>Techniques :</b> Unity, optimisation de scènes, programmation gameplay.</li>
+                                <li><b>Humaines :</b> Communication, gestion d'équipe, vocabulaire artistique et marketing.</li>
+                            </ul>
+                            <p className=""><b>Réalisations :</b></p>
+                            <ul>
+                                <li>Démo prévue en février 2025</li>
+                                <li>Site du projet : <a href="https://tonafallenzenith.fr" target ="blank">tonafallenzenith.fr</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </motion.div>
                 
