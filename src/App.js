@@ -1,22 +1,21 @@
-import React from 'react'
-
+import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,  // Change BrowserRouter en HashRouter
   Switch,
   Route
-} from "react-router-dom"
+} from "react-router-dom";
 import Main from './pages/main';
 
-
 function App(props) {
-
-  return <Router>
-    <Switch>
-      <Route exact path="/">
-        <Main />
-      </Route>
-    </Switch>
-  </Router>
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
