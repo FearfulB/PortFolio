@@ -222,9 +222,9 @@ export default function Main() {
                     transition={{ duration: 3 }}
                     className='flex justify-end'
                 >
-                    <div className='bg-white/50 rounded-l-lg  w-1/2 sm:w-1/3 backdrop-blur-md' style={{ transform: `translateY(${scrollPosition * -1}px)`, position: 'relative' }}>
+                    <div className='bgImg rounded-l-lg bg-contain w-1/2 sm:h-[500px] sm:w-1/4' style={{ transform: `translateY(${scrollPosition * -1}px)`, position: 'relative' }}>
                         <h2 className="text-3xl snowWhite z-10 MainFontBold pt-4 text-center">Tona : Fallen Zenith</h2>
-                        <div className ="snowWhite MainFont pl-4">
+                        <div className ="snowWhite MainFont pl-4 pt-3">
                             <p className=""><b>Rôle :</b> Développeur Unity et gestionnaire de projet</p>
                             <p className=""><b>Equipe :</b> 15 étudiants passionnés (développeurs, artistes, business)</p>
                             <p className=""><b>Compétences acquises :</b></p>

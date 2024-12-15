@@ -36,3 +36,9 @@
 .iceBlue{
   background-color: #A8DADC;
 }
+
+.bgImg{
+  background-image: url(../public/assets/image/projectSection.png);
+  background-repeat: no-repeat;
+  /* background-color: white; */
+}
