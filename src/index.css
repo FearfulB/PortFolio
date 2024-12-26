@@ -42,3 +42,19 @@
   background-repeat: no-repeat;
   /* background-color: white; */
 }
+
+/**************** PROJECT SECTION CSS ******************/
+.projectBackground{
+  background-color: #45B69C;
+  opacity: 100%;
+}
+
+.firstTab{
+  background-color: #EC4E20;
+}
+.secondTab{
+  background-color: #87B37A;
+}
+.thirdTab{
+  background-color: #7D6D61;
+}

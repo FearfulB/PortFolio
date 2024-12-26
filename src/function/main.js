@@ -1,31 +1,10 @@
+import React, { useEffect, useRef } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { OrbitControls } from "@react-three/drei";
+import SnowEffect from "./snow";
 
-import { useFrame, useLoader } from "@react-three/fiber";
-import { useRef } from "react";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
-
-
-// export default function AnimatedBox() {
-//     const meshRef = useRef();
-  
-//     useFrame(() => {
-//       if (meshRef.current) {
-//         meshRef.current.rotation.x += 0.01;
-//         meshRef.current.rotation.y += 0.01;
-//       }
-//     });
-  
-//     return (
-//       <mesh ref={meshRef} position={[0, 0, -200]}>
-//         <boxGeometry args={[1, 1, 1]} />
-//         <meshStandardMaterial color="red" />
-//       </mesh>
-//     );
-//   }
-
-
-export function LoadFbx(){
-
+const Scene = () => {
   const fbx = useLoader(FBXLoader, 'assets/models/winterIsland.fbx');
   const pivotRef = useRef();
 
@@ -35,13 +14,33 @@ export function LoadFbx(){
       pivotRef.current.rotation.y += 0.002;
     }
   });
-  
 
   return (
-    <>
-    <object3D ref = {pivotRef} position={[0,-120, -400]} >
-      <primitive object={fbx} position = {[-20,0,0]}  scale={[0.08,0.08,0.08 ]} />
-    </object3D>
-    </>
+    <group ref={pivotRef} position={[0, -120, -400]}>
+      <primitive object={fbx} position={[-20, 0, 0]} scale={[0.08, 0.08, 0.08]} />
+      <hemisphereLight intensity={0.5} />
+      <directionalLight position={[10, 10, 5]} intensity={1} />
+    </group>
   );
-}
+};
+
+const ThreeCanvas = () => {
+  return (
+    <Canvas style={{ 
+      position: 'fixed', 
+      top: 0, 
+      left: 0, 
+      width: '100%', 
+      height: '100%', 
+      zIndex: 0
+    }}>
+      <ambientLight intensity={0.5} />
+      <SnowEffect/>
+      <Scene />
+      <OrbitControls />
+    </Canvas>
+  );
+};
+
+export default ThreeCanvas;
+
