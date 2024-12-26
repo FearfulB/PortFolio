@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Project() {
+export default function Project(props) {
 
     return (
         <motion.div
@@ -8,7 +8,7 @@ export default function Project() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 3 }}
-            className='flex justify-end w-1/2 sm:w-1/3'
+            className=' sm:w-1/3'
         >
             <div className='projectBackground rounded-2xl backdrop-blur-md '>
                 <div className="flex w-full justify-center p-2">
@@ -33,8 +33,7 @@ export default function Project() {
                 </div>
                 <div className="p-3 text-white MainFont">
                     <p>
-                        Durant l’été 2024, avec mes amis, nous avons eu l’envie de laisser notre première empreinte dans le secteur du jeu vidéo.
-                        Nous avons monté une équipe de 15 personnes pour réaliser ce projet ambitieux. C’est ainsi qu’est né Tona : Fallen Zenith, un jeu d’aventure en monde semi-ouvert mêlant exploration et stratégie.
+                        {props.textDescription}
                     </p>
                     <p>
                         <span className="font-bold">Mon rôle :</span> Développement des différentes mécaniques de la zone temple, gestion des collisions et création de divers système comme le système d’interraction
@@ -46,12 +45,19 @@ export default function Project() {
                 </div>
 
                 <div className="w-full flex justify-end space-x-4 p-4">
-                    <a href="https://store.steampowered.com/app/3194900/Tona__Fallen_Zenith/" target="blank">
-                        <img src="assets/image/steam.png" alt="" className="w-10 h-10"/>
-                    </a>
-                    <a href="https://tonafallenzenith.fr" target="blank">
-                        <img src="assets/image/chrome.png" alt="" className="w-10 h-10"/>
-                    </a>
+                    {
+                        Array.from({ length: props.logoNumber }).map((_, index) => {
+                            const logoKey = `logo${index + 1}`;
+                            const linkKey = `link${index + 1}`;
+                            return(
+
+                                <a key={index} href={props[linkKey]} target="_blank" rel="noopener noreferrer">
+                                <img src={`assets/image/${props[logoKey]}.png`} alt={`${props[logoKey]}} image`} className="w-10 h-10"/>
+                            </a>
+                            );
+
+                        })
+                    }
                 </div>
             </div>
 

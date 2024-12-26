@@ -37,23 +37,37 @@ export default function Main() {
 
         <div className="relative bg-gray-950 z-index-[-2]">
             <ThreeCanvas />
-            
             <div className="relative z-10">
                 <ChangeLanguage setIsEnglish={setIsEnglish} isEnglish = {IsEnglish}/>
                 <Title isEnglish = {IsEnglish}/>
  
-                <Presentation text = {t} />
+                <div className='space-y-10'>
+                    <Presentation text = {t} />
 
-                <div className='w-full flex-col'>
-                    <div className='w-full flex justify-end '>
-                        <Project/>
+                    <div className='w-full space-y-10'>
+                        <div className='w-full flex justify-end '>
+                            <Project 
+                                textDescription = {t('project1Description')} 
+                                logo1 = {"steam"} 
+                                logo2 = {"chrome"} 
+                                logoNumber={2}
+                                link1 = {"https://store.steampowered.com/app/3194900/Tona__Fallen_Zenith/"}
+                                link2 = {"https://tonafallenzenith.fr"}
+                            />
+                        </div>
+                        <div className='w-full'>
+                            <Project 
+                                textDescription  = {t('project1Description')} 
+                                logo1 = {"github"}
+                                link1 = {"https://github.com"}
+                                logoNumber={1}
+                            />
+                        </div>
                     </div>
-                    <div className='w-full flex justify-start'>
-                        <Project/>
-                    </div>
+                    
+                    <SkillPanels/>
+
                 </div>
-                
-                <SkillPanels/>
             </div>
         </div>
 

@@ -9,7 +9,7 @@ export default function Presentation(props){
             transition={{ duration: 3 }}
             className='flex justify-start'
         >
-            <div className='bg-gradient-to-b from-blue-500 to-blue-300 p-8 bg-opacity-50 rounded-r-lg text-center w-1/2 sm:w-[40%] backdrop-blur-md space-y-4'>
+            <div className='bg-gradient-to-b from-blue-500 to-blue-300 p-8 bg-opacity-50 rounded-r-lg text-center w-2/3 sm:w-[40%] backdrop-blur-md space-y-4'>
                 <div className='w-full flex justify-center'>
                     <img src="assets/image/Johann.jpg" alt="Bois Johann Portfolio" class="w-36 rounded-2xl shadow-lg"/>
                 </div>
