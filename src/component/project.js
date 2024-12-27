@@ -13,46 +13,50 @@ export default function Project(props) {
             <div className='projectBackground rounded-2xl backdrop-blur-md '>
                 <div className="flex w-full justify-center p-2">
                     <div className="flex justify-center items-center w-12 h-12 bg-white rounded-full overflow-hidden ">
-                        <img src="assets/image/tona.png" alt="tona fallen zenith" className="w-10 h-10" />
+                        <img src={`assets/image/${props.projectDescription.img}.png`} alt={`${props.projectDescription.img}`} className="w-10 h-10" />
                     </div>
-                    <h2 className="sm:text-3xl text-lg snowWhite z-10 MainFontBold text-center flex items-center ml-4">
-                        Tona : Fallen Zenith
+                    <h2 className={`sm:${props.projectDescription.textSize} text-lg snowWhite z-10 MainFontBold text-center flex items-center ml-4`}>
+                        {props.projectDescription.title}
                     </h2>
                 </div>
                 <hr class="border-t border-white" />
                 <div id="tab" className="flex w-full MainFont text-white" >
-                    <div className="firstTab rounded-b-lg flex justify-center items-center p-4">
-                        <p className="text-center">Unity 3D</p>
-                    </div>
-                    <div className="secondTab rounded-b-lg flex justify-center items-center p-4">
-                        <p className="text-center">Game developpment</p>
-                    </div>
-                    <div className="thirdTab rounded-b-lg flex justify-center items-center p-4">
-                        <p className="text-center">C#</p>
-                    </div>
+                    {
+                        Array.from({ length: props.projectDescription.numberSkills }).map((_, index) => {
+                            return(
+                                <div 
+                                    key = {index}
+                                    className={`${props.projectDescription.colorSkills[index]} rounded-b-lg flex justify-center items-center p-4`} >
+                                    <p className="text-center">{props.projectDescription.skills[index]}</p>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
                 <div className="p-3 text-white MainFont">
                     <p>
-                        {props.textDescription}
+                        {props.projectDescription.text}
                     </p>
+                    <br/>
                     <p>
-                        <span className="font-bold">Mon rôle :</span> Développement des différentes mécaniques de la zone temple, gestion des collisions et création de divers système comme le système d’interraction
-                    
+                        <span className="font-bold">{props.projectDescription.myJob}</span> 
+                        {props.projectDescription.jobDescription}
                     </p>
+                    <br/>
                     <p>
-                        <span className="font-bold">Résultat :</span> Presque 100 wishlists sur steam
+                        <span className="font-bold">{props.projectDescription.result}</span> 
+                        {props.projectDescription.resultDescription}
                     </p>
                 </div>
 
                 <div className="w-full flex justify-end space-x-4 p-4">
                     {
-                        Array.from({ length: props.logoNumber }).map((_, index) => {
+                        Array.from({ length: props.projectDescription.logoNumber }).map((_, index) => {
                             const logoKey = `logo${index + 1}`;
                             const linkKey = `link${index + 1}`;
                             return(
-
-                                <a key={index} href={props[linkKey]} target="_blank" rel="noopener noreferrer">
-                                <img src={`assets/image/${props[logoKey]}.png`} alt={`${props[logoKey]}} image`} className="w-10 h-10"/>
+                                <a key={index} href={props.projectDescription[linkKey]} target="_blank" rel="noopener noreferrer">
+                                <img src={`assets/image/${props.projectDescription[logoKey]}.png`} alt={`${props.projectDescription[logoKey]}} image`} className="w-10 h-10"/>
                             </a>
                             );
 

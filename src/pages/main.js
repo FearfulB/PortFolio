@@ -23,7 +23,56 @@ export default function Main() {
     //     return () => window.removeEventListener('wheel', handleScroll);
     // }, []);
 
-  
+    const projet1 = {
+        title : "Tona : Fallen Zenith",
+        textSize : "text-3xl",
+        img : "tona",
+        numberSkills : 3,
+        skills : ["Unity 3D", "Game Developpment", "C#"],
+        colorSkills : ["firstTab","secondTab", "thirdTab"],
+        text : t("project1Description"),
+        logoNumber : 2,
+        logo1 : "steam",
+        logo2 : "chrome",
+        link1 : "https://store.steampowered.com/app/3194900/Tona__Fallen_Zenith/",
+        link2 : "https://tonafallenzenith.fr",
+        myJob : t("job"),
+        jobDescription : t("jobDescription1"),
+        result : t("result"),
+        resultDescription : t("resultDescription1")
+    }
+    const projet2 = {   
+        title : "Moteur de rendu 3D avec DirectX12",
+        textSize : "text-2xl",
+        img : "monaco",
+        numberSkills : 3,
+        skills : ["JavaScript", "Tailwind", "React"],
+        colorSkills : ["firstTab","secondTab", "thirdTab"],
+        text : t("project2Description"),
+        logoNumber : 1,
+        logo1 : "github",
+        link1 : "https://github.com/UVictoras/Projet-Commun-Oceano-Monaco",
+        myJob : t("job"),
+        jobDescription : t("jobDescription2"),
+        result : t("result"),
+        resultDescription : t("resultDescription2")
+    }
+    const projet3 = {   
+        title : "Moteur de rendu 3D avec DirectX12",
+        textSize : "text-2xl",
+        img : "shape",
+        numberSkills : 1,
+        skills : ["C++"],
+        colorSkills : ["firstTab"],
+        text : t("project3Description"),
+        logoNumber : 1,
+        logo1 : "github",
+        link1 : "https://github.com/Rayouyoux/DirectXAvengersEngine",
+        myJob : t("job"),
+        jobDescription : t("jobDescription3"),
+        result : t("result"),
+        resultDescription : t("resultDescription3")
+    }
 
     useEffect(() => {
         const savedLanguage = localStorage.getItem('language');
@@ -47,20 +96,17 @@ export default function Main() {
                     <div className='w-full space-y-10'>
                         <div className='w-full flex justify-end '>
                             <Project 
-                                textDescription = {t('project1Description')} 
-                                logo1 = {"steam"} 
-                                logo2 = {"chrome"} 
-                                logoNumber={2}
-                                link1 = {"https://store.steampowered.com/app/3194900/Tona__Fallen_Zenith/"}
-                                link2 = {"https://tonafallenzenith.fr"}
+                                projectDescription = {projet1}
                             />
                         </div>
                         <div className='w-full'>
                             <Project 
-                                textDescription  = {t('project1Description')} 
-                                logo1 = {"github"}
-                                link1 = {"https://github.com"}
-                                logoNumber={1}
+                                projectDescription = {projet2}
+                            />
+                        </div>
+                        <div className='w-full flex justify-end '>
+                            <Project 
+                                projectDescription = {projet3}
                             />
                         </div>
                     </div>
