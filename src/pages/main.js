@@ -39,11 +39,12 @@ export default function Main() {
         myJob : t("job"),
         jobDescription : t("jobDescription1"),
         result : t("result"),
-        resultDescription : t("resultDescription1")
+        resultDescription : t("resultDescription1"),
+        imgDesc : "tonaImg"
     }
     const projet2 = {   
-        title : "Moteur de rendu 3D avec DirectX12",
-        textSize : "text-2xl",
+        title : "Make It Blue",
+        textSize : "text-xl",
         img : "monaco",
         numberSkills : 3,
         skills : ["JavaScript", "Tailwind", "React"],
@@ -55,7 +56,8 @@ export default function Main() {
         myJob : t("job"),
         jobDescription : t("jobDescription2"),
         result : t("result"),
-        resultDescription : t("resultDescription2")
+        resultDescription : t("resultDescription2"),
+        imgDesc : "makeItBlue"
     }
     const projet3 = {   
         title : "Moteur de rendu 3D avec DirectX12",
@@ -71,7 +73,8 @@ export default function Main() {
         myJob : t("job"),
         jobDescription : t("jobDescription3"),
         result : t("result"),
-        resultDescription : t("resultDescription3")
+        resultDescription : t("resultDescription3"),
+        imgDesc : "engine"
     }
 
     useEffect(() => {

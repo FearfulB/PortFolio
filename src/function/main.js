@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { OrbitControls } from "@react-three/drei";
@@ -15,11 +15,12 @@ const Scene = () => {
     }
   });
 
+
   return (
     <group ref={pivotRef} position={[0, -120, -400]}>
       <primitive object={fbx} position={[-20, 0, 0]} scale={[0.08, 0.08, 0.08]} />
-      <hemisphereLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
+      <hemisphereLight intensity={2} />
+      <directionalLight position={[10, 10, 5]} intensity={4} />
     </group>
   );
 };
@@ -28,7 +29,7 @@ const ThreeCanvas = () => {
   return (
     <Canvas style={{ 
       position: 'fixed', 
-      top: 0, 
+      top: 0,  
       left: 0, 
       width: '100%', 
       height: '100%', 

@@ -8,9 +8,9 @@ export default function Project(props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 3 }}
-            className=' sm:w-1/3'
+            className=' w-1/2 sm:w-1/3'
         >
-            <div className='projectBackground rounded-2xl backdrop-blur-md '>
+            <div className='projectBackground rounded-2xl backdrop-blur-md w-full '>
                 <div className="flex w-full justify-center p-2">
                     <div className="flex justify-center items-center w-12 h-12 bg-white rounded-full overflow-hidden ">
                         <img src={`assets/image/${props.projectDescription.img}.png`} alt={`${props.projectDescription.img}`} className="w-10 h-10" />
@@ -26,8 +26,8 @@ export default function Project(props) {
                             return(
                                 <div 
                                     key = {index}
-                                    className={`${props.projectDescription.colorSkills[index]} rounded-b-lg flex justify-center items-center p-4`} >
-                                    <p className="text-center">{props.projectDescription.skills[index]}</p>
+                                    className={`${props.projectDescription.colorSkills[index]} rounded-b-lg flex justify-center items-center sm:p-4 p-1`} >
+                                    <p className="text-center sm:text-base text-xs">{props.projectDescription.skills[index]}</p>
                                 </div>
                             );
                         })
@@ -48,7 +48,9 @@ export default function Project(props) {
                         {props.projectDescription.resultDescription}
                     </p>
                 </div>
-
+                <div className="p-2">
+                    <img src={`assets/image/${props.projectDescription.imgDesc}.jpg`} alt = {`${props.projectDescription.imgDesc} image`} className="rounded-2xl"/>
+                </div>
                 <div className="w-full flex justify-end space-x-4 p-4">
                     {
                         Array.from({ length: props.projectDescription.logoNumber }).map((_, index) => {

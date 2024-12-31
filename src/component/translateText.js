@@ -6,6 +6,7 @@ const resources = {
   en: {
     translation: {
       welcome: "Welcome to my portfolio!",
+      download :"Download my resume",
       description1: "I am currently 20 years old and I am a 3rd year student in the field of video games. Passionate about creation and development, I am a very perfectionist and perseverant person. These qualities allowed me to successfully carry out several large-scale projects, where I was able to learn and evolve, both technically and creatively.",
       description2:"At the same time, I had the opportunity to do several small jobs, which gave me a variety of enriching experiences. Always looking for new knowledge and challenges, I look forward to sharing my journey and my projects with you.",
       project1Description: "During the summer of 2024, my friends and I wanted to make our first mark in the video game industry. We created a team of 15 people to carry out this ambitious project. And that's how Tona: Fallen Zenith was born, a semi-open world adventure game combining exploration and strategy.",
@@ -17,12 +18,13 @@ const resources = {
       jobDescription2 : " Create all the frontend of the application",
       jobDescription3 : " Understand how to create 3D shapes and how to apply a texture to them",
       resultDescription1 : " 100 wishlists on steam and a demo announced february 2025",
-      resultDescription2 : " ",
+      resultDescription2 : " A functional application that could have been used for ocean protection",
       resultDescription3 : " A working engine with an playable game",
     }
   },
   fr: {
     translation: {
+      download :"Télécharger mon CV ",
       description1: "J'ai actuellement 20 ans et je suis un étudiant en 3ème année dans le domaine du jeu vidéo. Passionné de création et de développement, je suis une personne très perfectionniste et persévérante. Ces qualités m'ont permis de mener à bien plusieurs projets d'envergure, où j'ai pu apprendre et évoluer, tant sur le plan technique que créatif.",
       description2:"En parallèle, j'ai eu l'opportunité d'effectuer plusieurs petits travaux, ce qui m'a apporté des expériences variées et enrichissantes. Toujours à la recherche de nouvelles connaissances et de défis, j'ai hâte de partager avec vous mon parcours et mes projets. ",
       project1Description :"Durant l’été 2024, avec mes amis, nous avons eu l’envie de laisser notre première empreinte dans le secteur du jeu vidéo. Nous avons monté une équipe de 15 personnes pour réaliser ce projet ambitieux.C’est ainsi qu’est né Tona : Fallen Zenith, un jeu d’aventure en monde semi-ouvert mêlant exploration et stratégie.",
@@ -34,7 +36,7 @@ const resources = {
       jobDescription2 : " Créer tous le frontend de l'application",
       jobDescription3 : " Comprendre comment créer des formes 3D et comment leur appliqué une texture",
       resultDescription1 : " 100 wishlists sur steam et une démo annoncé pour février 2025",
-      resultDescription2 : " ",
+      resultDescription2 : " Une application fonctionnel qui aurait pu être utilisé pour la protection des océans",
       resultDescription3 : " Un moteur fonctionnel avec un jeu jouable",
     }
   }

@@ -42,7 +42,9 @@
   background-repeat: no-repeat;
   /* background-color: white; */
 }
-
+.buttonBackground{
+  background-color: #1075F9;
+}
 /**************** PROJECT SECTION CSS ******************/
 .projectBackground{
   background-color: #1D3E06;
