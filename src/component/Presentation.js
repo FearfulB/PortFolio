@@ -25,7 +25,7 @@ export default function Presentation(props){
                     </p>
                 </div>
                 <div>
-                    <a href='assets/image/cv.pdf' download>
+                    <a href='assets/image/Johann-BOIS-CV.pdf' download>
                         <button type="button" class="text-white buttonBackground hover:bg-blue-800 MainFont rounded-full text-xs sm:text-sm px-5 py-2.5 text-center me-2 mb-2">{props.text('download')}</button>
                     </a>
                 </div>
