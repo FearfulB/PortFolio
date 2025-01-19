@@ -23,6 +23,11 @@ export default function Main() {
     //     return () => window.removeEventListener('wheel', handleScroll);
     // }, []);
 
+    const idLink = [
+        "tona",
+        "mib",
+        "engine"
+    ]
     const projet1 = {
         title : "Tona : Fallen Zenith",
         textSize : "text-3xl",
@@ -47,7 +52,7 @@ export default function Main() {
         textSize : "text-xl",
         img : "monaco",
         numberSkills : 3,
-        skills : ["JavaScript", "Tailwind", "React"],
+        skills : ["React", "Tailwind", "JavaScript"],
         colorSkills : ["firstTab","secondTab", "thirdTab"],
         text : t("project2Description"),
         logoNumber : 1,
@@ -65,7 +70,7 @@ export default function Main() {
         img : "shape",
         numberSkills : 1,
         skills : ["C++"],
-        colorSkills : ["firstTab"],
+        colorSkills : ["thirdTab"],
         text : t("project3Description"),
         logoNumber : 1,
         logo1 : "github",
@@ -94,28 +99,29 @@ export default function Main() {
                 <Title isEnglish = {IsEnglish}/>
  
                 <div className='space-y-10'>
-                    <Presentation text = {t} />
+                    <Presentation text = {t} link={idLink}/>
 
                     <div className='w-full space-y-10'>
                         <div className='w-full flex justify-end '>
                             <Project 
                                 projectDescription = {projet1}
+                                id = {"tona"}
                             />
                         </div>
                         <div className='w-full'>
                             <Project 
                                 projectDescription = {projet2}
+                                id = {"mib"}
                             />
                         </div>
                         <div className='w-full flex justify-end '>
                             <Project 
                                 projectDescription = {projet3}
+                                id = {"engine"}
                             />
                         </div>
                     </div>
-                    
-                    <SkillPanels/>
-
+                
                 </div>
             </div>
         </div>

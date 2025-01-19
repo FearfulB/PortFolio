@@ -72,16 +72,21 @@
 }
 /**************** PROJECT SECTION CSS ******************/
 .projectBackground{
-  background-color: #1D3E06;
+  background-color: #5F3609;
   opacity: 100%;
 }
 
 .firstTab{
-  background-color: #EC4E20;
+  background-color: #4A7C1C;
 }
 .secondTab{
-  background-color: #87B37A;
+  background-color: #DACC46;
 }
 .thirdTab{
-  background-color: #7D6D61;
+  background-color: #656565;
+}
+
+/************** SKILLS *******************************/
+.skillBackground{
+  /* background-color: #E0E0E0; */
 }

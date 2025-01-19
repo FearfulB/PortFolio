@@ -7,6 +7,7 @@ const resources = {
     translation: {
       welcome: "Welcome to my portfolio!",
       download :"Download my resume",
+      skill:"My Skills",
       description1: "I am currently 20 years old and I am a 3rd year student in the field of video games. Passionate about creation and development, I am a very perfectionist and perseverant person. These qualities allowed me to successfully carry out several large-scale projects, where I was able to learn and evolve, both technically and creatively.",
       description2:"At the same time, I had the opportunity to do several small jobs, which gave me a variety of enriching experiences. Always looking for new knowledge and challenges, I look forward to sharing my journey and my projects with you.",
       project1Description: "During the summer of 2024, my friends and I wanted to make our first mark in the video game industry. We created a team of 15 people to carry out this ambitious project. And that's how Tona: Fallen Zenith was born, a semi-open world adventure game combining exploration and strategy.",
@@ -25,6 +26,7 @@ const resources = {
   fr: {
     translation: {
       download :"Télécharger mon CV ",
+      skill:"Mes compétences",
       description1: "J'ai actuellement 20 ans et je suis un étudiant en 3ème année dans le domaine du jeu vidéo. Passionné de création et de développement, je suis une personne très perfectionniste et persévérante. Ces qualités m'ont permis de mener à bien plusieurs projets d'envergure, où j'ai pu apprendre et évoluer, tant sur le plan technique que créatif.",
       description2:"En parallèle, j'ai eu l'opportunité d'effectuer plusieurs petits travaux, ce qui m'a apporté des expériences variées et enrichissantes. Toujours à la recherche de nouvelles connaissances et de défis, j'ai hâte de partager avec vous mon parcours et mes projets. ",
       project1Description :"Durant l’été 2024, avec mes amis, nous avons eu l’envie de laisser notre première empreinte dans le secteur du jeu vidéo. Nous avons monté une équipe de 15 personnes pour réaliser ce projet ambitieux.C’est ainsi qu’est né Tona : Fallen Zenith, un jeu d’aventure en monde semi-ouvert mêlant exploration et stratégie.",

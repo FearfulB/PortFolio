@@ -9,6 +9,7 @@ export default function Project(props) {
             exit={{ opacity: 0 }}
             transition={{ duration: 3 }}
             className=' w-1/2 sm:w-1/3'
+            id = {props.id}
         >
             <div className='projectBackground rounded-2xl backdrop-blur-md w-full '>
                 <div className="flex w-full justify-center p-2">
@@ -49,7 +50,7 @@ export default function Project(props) {
                     </p>
                 </div>
                 <div className="p-2">
-                    <img src={`assets/image/${props.projectDescription.imgDesc}.jpg`} alt = {`${props.projectDescription.imgDesc} image`} className="rounded-2xl"/>
+                    <img src={`assets/image/${props.projectDescription.imgDesc}.jpg`} alt = {`${props.projectDescription.imgDesc} image`} className="rounded-2xl w-full"/>
                 </div>
                 <div className="w-full flex justify-end space-x-4 p-4">
                     {
