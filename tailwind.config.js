@@ -7,6 +7,12 @@ module.exports = {
       backdropBlur: {
         '3xl': 'blur(32px)',
       },
+      colors: {
+        myBlue: {
+          300: '#D1E5F0',
+          500: '#BEDDEF'
+        }
+      }
     },
   },
   plugins: [

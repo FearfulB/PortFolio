@@ -86,7 +86,17 @@
   background-color: #656565;
 }
 
-/************** SKILLS *******************************/
-.skillBackground{
-  /* background-color: #E0E0E0; */
+/************** BackgroundColor *******************************/
+.DarkBrawnBackground{
+  background-color: #5E3408;
+}
+.MidleBrawnBackground{
+  background-color: #76430B;
+}
+.LightBrawnBackground{
+  background-color: #8D500D;
+}
+
+.SnowBackground{
+  background-color: #F8F5F2;
 }
